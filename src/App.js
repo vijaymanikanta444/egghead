@@ -23,9 +23,11 @@ class App extends React.Component {
   componentDidMount() {
     console.log('componentDidMount');
   }
-  componentWillUnMount() {
-    console.log('componentWillUnMount');
+  
+  componentWillUnmount(){
+    console.log('componentWillUnMount')
   }
+ 
   
  }
 
