@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 
 class App extends React.Component {
@@ -26,7 +26,7 @@ class App extends React.Component {
         step={1}
         val={+this.state.red}
         label="RED"
-        type="number"
+        
         update={this.update} />
       </div>
     );
@@ -53,13 +53,13 @@ class NumInput extends React.Component {
 }
 
 NumInput.propTypes = {
-  min: React.PropTypes.number.isRequired,
-  max: React.PropTypes.number,
-  step: React.PropTypes.number,
-  val: React.PropTypes.number,
-  label: React.PropTypes.string,
-  update: React.PropTypes.func.isRequired,
-  type: React.PropTypes.oneOf(['number', 'range'])
+  min: PropTypes.number,
+  max: PropTypes.number,
+  step: PropTypes.number,
+  val: PropTypes.number,
+  label: PropTypes.string,
+  update: PropTypes.func.isRequired,
+  type: PropTypes.oneOf(['number', 'range'])
 }
 
 NumInput.defaultProps = {
